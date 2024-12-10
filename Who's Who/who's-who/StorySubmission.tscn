@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://clxx2pfr4d8nm"]
+
+[ext_resource type="Script" path="res://StorySubmission.gd" id="1_e52j6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+script = ExtResource("1_e52j6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Please enter your story:"
+
+[node name="TextEdit" type="TextEdit" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Submit
+"
+
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_SubmitButton_pressed"]
